@@ -1,32 +1,45 @@
 import { Column, Entity, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Race } from "./Race/Race";
+import { CharacterClass } from "./classe/Classe";
+import { Competence } from "./Competence";
+import { Spell } from "./Sort";
+import { Mastery } from "./Maitrise";
+import { Action } from "./Action";
 
 
 @Entity()
 export class Charactere{
     @PrimaryGeneratedColumn()
-    id : number;
+    id!: number
 
     @Column()
-    name: string;
-
-    @Column({type: "int",default: 1})
-    level: number
-
-    @ManyToOne(()=> Classe)
-    classe : Classe;
+    name!: string
 
     @ManyToOne(()=> Race)
-    race : Race;
+    race!: Race
 
-    @ManyToMany(()=> Sort, (sort)=>sort.charactere)
+    @ManyToOne(()=>CharacterClass)
+    characterClass!: CharacterClass
+
+    @Column({type: "int", default: 1})
+    CharacterLevel!: number
+
+    @Column ({type:"float", default: 0.0})
+    move!: number
+
+    @ManyToMany(()=> Competence)
     @JoinTable()
-    sorts: Sort[]
+    competences!: Competence[]
     
-    @ManyToMany(()=> Action, (action)=>action.charactere)
+    @ManyToMany(()=> Spell)
     @JoinTable()
-    actions: Action[]
+    spells!:Spell[]
+    
+    @ManyToMany(()=> Mastery)
+    @JoinTable()
+    masteries!: Mastery[]
 
-    @ManyToMany(()=> Aptitude, (aptitude)=>aptitude.charactere)
+    @ManyToMany(()=> Action)
     @JoinTable()
-    aptitudes: Aptitude[]
+    actions!: Action[]
 }

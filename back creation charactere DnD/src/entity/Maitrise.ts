@@ -1,13 +1,13 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-export class Action{
+export class Mastery {
     @PrimaryGeneratedColumn()
-    id!: number
+    id!: number;
 
     @Column()
-    name!: string
-
-    @Column("text")
-    description!: string
+    name!:string;
+    
+    @Column()
+    type!: string
 }
