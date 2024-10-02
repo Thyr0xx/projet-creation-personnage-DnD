@@ -1,0 +1,391 @@
+[
+    {
+        "id": "elf",
+        "name": "Elf",
+        "description": "blabla",
+        "move": 9,
+        "traits":{
+            "masteries": ["longswords", "shortswords", "longbows", "shortbows"],
+            "nightVision": 12,
+            "advantage":[
+                {
+                    "type":"savingThrow",
+                    "target":"charm"
+                }
+            ],
+            "immunityMagicSleep" : true
+        },
+        "subRaces":[
+            {
+                "id": "woodElf",
+                "name": "Wood Elf",
+                "description":"blabla",
+                "traits":{
+                    "bonusMove": 1.5
+                }
+            },
+            {
+                "id":"highElf",
+                "name":"High Elf",
+                "description":"blabla",
+                "traits":{
+                    "spells":{
+                        "0": ["fireBolt"]
+                    }
+                }
+            
+            }
+        ]
+    },
+    {
+        "id":"human",
+        "name":"Human",
+        "description" :"blabla",
+        "move": 9,
+        "traits":{
+            "masteries":["pikes", "spears","halberds", "glaives", "shields", "lightArmour"],
+            "additionalSkill": true,
+            "weightMultiplier": 1.25
+        }
+
+    },
+    {
+        "id":"tiefling",
+        "name":"Tiefling",
+        "description":"blabla",
+        "move":9,
+        "traits":{
+            "nightVision":12,
+            "resistance":[
+                {
+                    "type":"fire",
+                    "reduction":0.5
+                }
+            ]
+        },
+        "subRaces":[
+            {
+                "id": "asmodeus",
+                "name": "Asmodeus",
+                "description":"blabla",
+                "traits":{
+                    "spells":{
+                        "0": ["produceFlame"],
+                        "3": ["hellishRebuke"],
+                        "5":["darkness"]
+                    }
+                }
+            },
+            {
+                "id":"mephistopheles",
+                "name":"Mephistopheles",
+                "description":"blabla",
+                "traits":{
+                    "spells":{
+                        "0": ["mageHand"],
+                        "3":["burningHand"],
+                        "5":["flameBlade"] 
+                    }
+                }
+            },
+            {
+                "id":"zariel",
+                "name":"Zariel",
+                "description":"blabla",
+                "traits":{
+                    "spells":{
+                        "0": ["thaumaturgy"],
+                        "3":["searingSmite"],
+                        "5":["brandingSmite"]
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "halfElf",
+        "name":"Half-Elf",
+        "description":"blabla",
+        "move": 9,
+        "traits":{
+            "masteries":["pikes", "spears", "halberds", "glaives", "shields", "lightArmour"],
+            "nightVision": 12,
+            "advantage":[
+                {
+                    "type":"savingThrow",
+                    "target":"charm"
+                }
+            ],
+            "immunityMagicSleep" : true
+        },
+        "subRaces":[
+            {
+                "id":"highHalfElf",
+                "name":"High Half-Elf",
+                "description":"blabla",
+                "traits":{
+                    "spells":{
+                        "0": ["fireBolt"]
+                    }
+                }
+            },
+            {
+                "id":"woodHalfElf",
+                "name":"Wood Half-Elf",
+                "description":"blabla",
+                "traits":{
+                    "bonusMove": 1.5
+                }
+            },
+            {
+                "id":"drowHalfElf",
+                "name":"Drow Half-Elf",
+                "description":"blabla",
+                "traits":{
+                    "spells":{
+                        "0": ["dancingLights"],
+                        "3":["faerieFire"],
+                        "5":["darkness"]
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "drow",
+        "name":"Drow",
+        "description":"blabla",
+        "move": 9,
+        "traits":{
+            "masteries":["rapiers","shortswords","handCrossbows"],
+            "superiorNightVision":24,
+            "advantage":[
+                {
+                    "type":"savingThrow",
+                    "target":"charm"
+                }
+            ],
+            "immunityMagicSleep" : true,
+            "spells":{
+                "0": ["dancingLights"],
+                "3":["faerieFire"],
+                "5":["darkness"]
+            }
+        },
+        "subRaces":[
+            {
+                "id": "lolthSworn",
+                "name":"Lolth-Sworn",
+                "description":"The only difference between Drow subraces lies in their available dialogue options and deity selection as clerics"                
+            },
+            {
+                "id": "seldarine",
+                "name":"Seldarine",
+                "description":"The only difference between Drow subraces lies in their available dialogue options and deity selection as clerics"
+            }
+        ]
+    },
+    {
+        "id":"dwarf",
+        "name":"Dwarf",
+        "description":"blabla",
+        "move": 7.5,
+        "traits":{
+            "masteries":["battleaxes", "handaxes", "lightHammers", "warhammers"],
+            "nightVision":12,
+            "advantage":[
+                {
+                    "type":"savingThrow",
+                    "target":"poison"
+                }
+            ],
+            "resistance":[
+                {
+                    "type":"poison",
+                    "reduction":0.5
+                }
+            ]
+        },
+        "subRaces":[
+            {
+                "id": "goldDwarf",
+                "name": "Gold Dwarf",
+                "description":"blabla",
+                "traits":{
+                    "maximumHitPointPerLevel":1,
+                    "nightVision":12
+                }
+            },
+            {
+                "id": "shieldDwarf",
+                "name": "Shield Dwarf",
+                "description":"blabla",
+                "traits":{
+                    "masteries":["lightArmour", "mediumArmour"],
+                    "nightVision":12
+                }
+            },
+            {
+                "id": "duergar",
+                "name": "Duergar",
+                "description":"blabla",
+                "traits":{
+                    "superiorNightVision":24,
+                    "advantage":[
+                        {
+                            "type":"savingThrow",
+                            "target": "illusion"
+                        },
+                        {
+                            "type":"savingThrow",
+                            "target":"charm"
+                        },
+                        {
+                            "type":"savingThrow",
+                            "target":"paralysis"
+                        }
+                    ],
+                    "spells":{
+                        "3":["enlarge"],
+                        "5":["invisibility"]
+                    }
+                 
+                }
+            }
+        ]
+    },
+    {
+        "id":"gnome",
+        "name":"Gnome",
+        "description":"blabla",
+        "move":7.5,
+        "traits":{
+            "nightVision":12,
+            "advantage":[
+                {
+                    "type":"test",
+                    "target": "intelligence"
+                },
+                {
+                    "type":"test",
+                    "target":"wisdom"
+                },
+                {
+                    "type":"test",
+                    "target":"charisma"
+                }
+            ]  
+        },
+        "subRaces":[
+            {
+                "id":"forestGnome",
+                "name":"Forest Gnome",
+                "description":"blabla",
+                "traits":{
+                    "spells":{
+                        "0":["speakWithAnimals"]
+                    }
+                }
+            },
+            {
+                "id": "deepGnome",
+                "name":"Deep Gnome",
+                "description":"blabla",
+                "traits":{
+                    "superiorNightVision":24,
+                    "advantage":[
+                        {
+                            "type":"test",
+                            "target": "stealth"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "rockGnome",
+                "name":"Rock Gnome",
+                "description":"blabla",
+                "traits":{
+                    "expertiseHistory": true
+                }
+            }
+        ]
+    },
+    {
+        "id": "githyanki",
+        "name":"Githyanki",
+        "description":"blabla",
+        "move":9,
+        "traits":{
+            "masteries":["shortswords", "longswords", "greatswords", "lightArmour", "mediumArmour"],
+            "spells":{
+                "0":["mageHand"],
+                "3":["enhanceLeap"],
+                "5":["mistyStep"]
+            },
+            "astralKnowledge": true
+        }
+    },
+    {
+        "id": "halfling",
+        "name":"Halfling",
+        "description":"blabla",
+        "move":7.5,
+        "traits":{
+            "advantage":[
+                {
+                    "type":"savingThrow",
+                    "target": "frightened"
+                }
+            ],
+            "halflingLuck":true
+        },
+        "subRaces":[
+            {
+                "id": "lightfootHalfling",
+                "name": "Lightfoot Halfling",
+                "description":"blabla",
+                "traits":{
+                    "advantage":[
+                        {
+                            "type":"test",
+                            "target": "stealth"
+                        }
+                    ]
+                }
+            },
+            {
+                "id" : "strongheartHalfling",
+                "name": "Strongheart Halfling",
+                "description":"blabla",
+                "traits":{
+                    "resistance":[
+                        {
+                            "type": "poison",
+                            "reduction": 0.5
+                        }
+                    ],
+                    "advantage": [
+                        {
+                            "type": "savingThrow",
+                            "target":"poison"
+                        }
+                    ]
+                    
+                }
+            }
+        ]
+    },
+    {
+        "id": "halfOrc",
+        "name":"Half-Orc",
+        "description":"blabla",
+        "move":9,
+        "traits":{
+            "skills": ["intimidation"],
+            "nightVision":12,
+            "savageAttack": true,
+            "relentlessEndurance":true
+        }
+    }
+]
