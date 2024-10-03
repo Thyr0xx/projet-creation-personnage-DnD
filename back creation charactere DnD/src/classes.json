@@ -3,49 +3,334 @@
         "id": "barbarian",
         "name": "Barbarian",
         "description": "blibli",
-        "hit point": {
-            "at level 1": 12,
-            "on level up": 7
+        "hitPoint": {
+            "atLevel1": 12,
+            "onLevelUp": 7
         },
-        "key abilities": [
-            "Strenght",
+        "keyAbilities": [
+            "strenght",
             "dexterity",
             "constitution"
         ],
-        "Saving throw proficiencies": [
-            "Strenght",
+        "savingThrowProficiencies": [
+            "strenght",
             "constitution"
         ],
-        "Equipment proficiencies": [
-            "Martial weapons",
-            "Simple weapons",
-            "Light armour",
-            "Medium armour",
-            "Shields"
+        "equipmentProficiencies": [
+            "martialWeapons",
+            "simpleWeapons",
+            "lightArmour",
+            "mediumArmour",
+            "shields"
         ],
-        "Skill proficiencies": [
-            " Animal Handling",
-            "Athletics",
-            "Intimidation",
-            "Nature",
-            "Survival",
-            "Perception"
+        "skillProficiencies": [
+            "animalHandling",
+            "athletics",
+            "intimidation",
+            "nature",
+            "survival",
+            "perception"
         ],
-        "Starting Equipment": [
-            "Greataxe",
-            "Handaxe",
-            "Barbarian",
-            "Clothes",
-            "Leather Boots"
+        "startingEquipment": [
+            "greataxe",
+            "handaxe",
+            "barbarian",
+            "clothes",
+            "leatherBoots"
         ],
-        "Spellcasting Ability": [
-            "Charisma"
+        "spellcastingAbility": [
+            "charisma"
         ],
-        "Subclasses": [
+        "subClasses": [
             {
                 "id": "wildheart",
                 "name": "Wildheart",
-                "description": "blibli"
+                "description": "blibli",
+                "level-3-SpeakWithAnimals": {
+                    "bestialHeart": [
+                        {
+                            "name": "bearHeart",
+                            "description": "blibli",
+                            "grant": [
+                                "Rage",
+                                "unrelentingFerocity"
+                            ]
+                        },
+                        {
+                            "name": "eagleHeart",
+                            "description": "blibli",
+                            "grant": [
+                                "Rage",
+                                "divingStrike"
+                            ]
+                        },
+                        {
+                            "name": "elkHeart",
+                            "description": "blibli",
+                            "grant": [
+                                "Rage",
+                                "primalStampede"
+                            ]
+                        },
+                        {
+                            "name": "tigerHeart",
+                            "description": "blibli",
+                            "grant": [
+                                "Rage",
+                                "tigersBloodlust"
+                            ]
+                        },
+                        {
+                            "name": "wolfHeart",
+                            "description": "blibli",
+                            "grant": [
+                                "Rage",
+                                "incitingHowl"
+                            ]
+                        }
+                    ]
+                },
+                "level-6-animalAspect": {
+                    "aspectOfTheBeast": [
+                        {
+                            "name": "bear",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "chimpanzee",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "crocodile",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "eagle",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "elk",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "honeyBadger",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "stallion",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "tiger",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "wolf",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "wolverine",
+                            "description": "blibli"
+                        }
+                    ]
+                },
+                "level-8": {
+                    "landStride": [
+                        {
+                            "name": "difficultTerrain",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "advantage",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "plants",
+                            "description": "blibli"
+                        }
+                    ]
+                },
+                "level-10": {
+                    "aspectOfTheBeast": [
+                        {
+                            "name": "bear",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "chimpanzee",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "crocodile",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "eagle",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "elk",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "honeyBadger",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "stallion",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "tiger",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "wolf",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "wolverine",
+                            "description": "blibli"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "berserker",
+                "name": "Berserker",
+                "description": "blibli",
+                "level-3": {
+                    "frenzy": [
+                        {
+                            "name": "frenziedStrike",
+                            "description": "blibli"
+                        },
+                        {
+                            "name": "enragedThrow",
+                            "description": "blibli"
+                        }
+                    ]
+                },
+                "level-6": {
+                    "name": "mindlessRage",
+                    "description": "blibli"
+                },
+                "level-10": {
+                    "name": "intimidationPresence",
+                    "description": "blibli"
+                }
+            },
+            {
+                "id": "wildmagic",
+                "name": "Wild Magic",
+                "description": "lorem ipsum",
+                "level-3": [
+                    {
+                        "name": "wildMagicSurge",
+                        "description": "lorem ipsum",
+                        "effect": [
+                            {
+                                "weaponInfusion": 1
+                            },
+                            {
+                                "weaponretribution": 2
+                            },
+                            {
+                                "protectiveLights": 3
+                            },
+                            {
+                                "intangibleSpirit": 4
+                            },
+                            {
+                                "boltOfLight": 5
+                            },
+                            {
+                                "vineGrowth": 6
+                            },
+                            {
+                                "teleport": 7
+                            },
+                            {
+                                "darkTendrils": 8
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wildMagicRage",
+                        "description": "lorem ipsum",
+                        "effect": [
+                            {
+                                "weaponInfusion": 1
+                            },
+                            {
+                                "weaponretribution": 2
+                            },
+                            {
+                                "protectiveLights": 3
+                            },
+                            {
+                                "intangibleSpirit": 4
+                            },
+                            {
+                                "boltOfLight": 5
+                            },
+                            {
+                                "vineGrowth": 6
+                            },
+                            {
+                                "teleport": 7
+                            },
+                            {
+                                "darkTendrils": 8
+                            }
+                        ]
+                    },
+                    {
+                        "name": "magicAwareness",
+                        "description": "lorem ipsum"
+                    }
+                ],
+                "level-6": [
+                    {
+                        "id": "bolsteringMagic",
+                        "name": "Bolstering Magic",
+                        "description": [
+                            {
+                                "name": "boon",
+                                "description": "lorem ipsum"
+                            },
+                            {
+                                "name": "level-1-spellSlot",
+                                "description": "lorem ipsum"
+                            },
+                            {
+                                "name": "level-2-spellSlot",
+                                "description": "lorem ipsum"
+                            }
+                        ]
+                    }
+                ],
+                "level-9": {
+                    "id": "bolsteringMagic",
+                    "name": "Bolstering Magic",
+                    "description": [
+                        {
+                            "name": "level-3-spellSlot",
+                            "description": "lorem ipsum"
+                        }
+                    ]
+                },
+                "level-10": {
+                    "id" : "unstalbleBacklash",
+                    "name": "Unstalble Backlash",
+                    "description": [
+                        {
+                            "name": "level-3-spellSlot",
+                            "description": "lorem ipsum"
+                        }
+                    ]
+                }
+
             }
         ]
     }
