@@ -1,0 +1,52 @@
+[
+    {
+        "id": "barbarian",
+        "name": "Barbarian",
+        "description": "blibli",
+        "hit point": {
+            "at level 1": 12,
+            "on level up": 7
+        },
+        "key abilities": [
+            "Strenght",
+            "dexterity",
+            "constitution"
+        ],
+        "Saving throw proficiencies": [
+            "Strenght",
+            "constitution"
+        ],
+        "Equipment proficiencies": [
+            "Martial weapons",
+            "Simple weapons",
+            "Light armour",
+            "Medium armour",
+            "Shields"
+        ],
+        "Skill proficiencies": [
+            " Animal Handling",
+            "Athletics",
+            "Intimidation",
+            "Nature",
+            "Survival",
+            "Perception"
+        ],
+        "Starting Equipment": [
+            "Greataxe",
+            "Handaxe",
+            "Barbarian",
+            "Clothes",
+            "Leather Boots"
+        ],
+        "Spellcasting Ability": [
+            "Charisma"
+        ],
+        "Subclasses": [
+            {
+                "id": "wildheart",
+                "name": "Wildheart",
+                "description": "blibli"
+            }
+        ]
+    }
+]
