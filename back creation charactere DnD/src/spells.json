@@ -1,0 +1,397 @@
+{
+    "0":[
+        {
+            "id": "acidSplash",
+            "name":"Acid Splash",
+            "description":"Throw a bubble of acid that damages each creature it hits.",
+            "school":"conjuration",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"acid",
+                "dice":"1d6"
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 2,
+                    "unit":"meters"
+                },
+                "type":"acid",
+                "dice":"1d3"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d6", "3d6"]
+            },
+            "classes":["sorcerer","wizard"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight","arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["damage","range", "areaOfEffect", "acid"]
+        },
+        {
+            "id": "bladeWard",
+            "name":"Blade Ward",
+            "description":"Take only half the damage from bludgeoning piercing and slashing attack",
+            "school":"abjuration",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 0,
+                "unit":"self"
+            },
+            "duration":"oneRound",
+            "effect":{
+                "type":"resistance",
+                "resistance":["bludgeoning", "piercing","slashing"],
+                "source":"weaponAttacks"
+            },
+            "classes":["bard","cleric","sorcerer","wizard","warlock"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight","arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["defense","self", "resistance"]
+        },
+        {
+            "id": "boneChill",
+            "name":"Bone Chill ",
+            "description":"Prevent the target from healing until your next turn. An undead target receives Disadvantage on Attack rolls.",
+            "school":"necromancy",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"necrotic",
+                "dice":"1d8"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d8", "3d8"]
+            },
+            "classes":["sorcerer","warlock","wizard"],
+            "subClasses":[
+                {
+                    "name":["circleOfSpores"],
+                    "level":2
+                },
+                {
+                    "name":["eldritchKnight", "arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["damage","necrotic","range"]
+        },
+        {
+            "id": "dancingLight",
+            "name":"Dancing Light",
+            "description":"Illuminate a 9meter radius.",
+            "school":"evocation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"tenRound",
+            "effect":{
+                "type":"light",
+                "lights":4
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 9,
+                    "unit":"meters"
+                }
+            },
+            "classes":["bard","sorcerer","wizard"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight", "arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf","drow","drowHalfElf"],
+            "tags": ["utility","light", "concentration"]
+        },
+        {
+            "id": "eldritchBlast",
+            "name":"Eldritch Blast",
+            "description":"Conjure a beam of crackling energy",
+            "school":"evocation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"force",
+                "dice":"1d10"
+            },
+
+            "scaling":{
+                "level":[5, 10],
+                "effect":["twoBeams", "threeBeams"]
+            },
+            "classes":["warlock"],
+            "tags": ["damage","range", "force"]
+        },
+        {
+            "id": "fireBolt",
+            "name":"Fire Bolt",
+            "description":"Hurl a mote of fire.",
+            "school":"evocation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"fire",
+                "dice":"1d10"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d10", "3d10"]
+            },
+            "classes":["sorcerer","wizard"],
+            "subClasses":[
+                {
+                    "name":["arcaneTrickster","eldritchKnight"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["damage","fire", "range"]
+        },
+        {
+            "id": "friends",
+            "name":"Friends",
+            "description":"Gain advantage on charisma checks against a non-hostile creature",
+            "school":"enchantement",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"tenRound",
+            "effect":{
+                "type":"buff",
+                "target":"charismaCheck",
+                "advantage": true
+            },
+            "classes":["bard", "wizard", "sorcerer", "warlock"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight", "arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["concentration","utility", ""]
+        },
+        {
+            "id": "",
+            "name":" ",
+            "description":"",
+            "school":"",
+            "castingTime":"",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"",
+            "damage":{
+                "type":"",
+                "dice":""
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 2,
+                    "unit":"meters"
+                },
+                "type":"",
+                "dice":""
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["", ""]
+            },
+            "classes":["",""],
+            "races":["", ""],
+            "tags": ["","", ""]
+        },
+        {
+            "id": "",
+            "name":" ",
+            "description":"",
+            "school":"",
+            "castingTime":"",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"",
+            "damage":{
+                "type":"",
+                "dice":""
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 2,
+                    "unit":"meters"
+                },
+                "type":"",
+                "dice":""
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["", ""]
+            },
+            "classes":["",""],
+            "races":["", ""],
+            "tags": ["","", ""]
+        },
+        {
+            "id": "",
+            "name":" ",
+            "description":"",
+            "school":"",
+            "castingTime":"",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"",
+            "damage":{
+                "type":"",
+                "dice":""
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 2,
+                    "unit":"meters"
+                },
+                "type":"",
+                "dice":""
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["", ""]
+            },
+            "classes":["",""],
+            "races":["", ""],
+            "tags": ["","", ""]
+        },
+        {
+            "id": "",
+            "name":" ",
+            "description":"",
+            "school":"",
+            "castingTime":"",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"",
+            "damage":{
+                "type":"",
+                "dice":""
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 2,
+                    "unit":"meters"
+                },
+                "type":"",
+                "dice":""
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["", ""]
+            },
+            "classes":["",""],
+            "races":["", ""],
+            "tags": ["","", ""]
+        },
+        {
+            "id": "",
+            "name":" ",
+            "description":"",
+            "school":"",
+            "castingTime":"",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"",
+            "damage":{
+                "type":"",
+                "dice":""
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 2,
+                    "unit":"meters"
+                },
+                "type":"",
+                "dice":""
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["", ""]
+            },
+            "classes":["",""],
+            "races":["", ""],
+            "tags": ["","", ""]
+        },
+        {
+            "id": "",
+            "name":" ",
+            "description":"",
+            "school":"",
+            "castingTime":"",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"",
+            "damage":{
+                "type":"",
+                "dice":""
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 2,
+                    "unit":"meters"
+                },
+                "type":"",
+                "dice":""
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["", ""]
+            },
+            "classes":["",""],
+            "races":["", ""],
+            "tags": ["","", ""]
+        }
+        
+    ]
+}
+      
