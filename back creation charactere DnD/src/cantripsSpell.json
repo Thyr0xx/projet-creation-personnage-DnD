@@ -1,0 +1,562 @@
+{
+    "0":[
+        {
+            "id": "acidSplash",
+            "name":"Acid Splash",
+            "description":"Throw a bubble of acid that damages each creature it hits.",
+            "school":"conjuration",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"acid",
+                "dice":"1d6"
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 2,
+                    "unit":"meters"
+                },
+                "type":"acid",
+                "dice":"1d3"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d6", "3d6"]
+            },
+            "classes":["sorcerer","wizard"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight","arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["damage","range", "areaOfEffect", "acid"]
+        },
+        {
+            "id": "bladeWard",
+            "name":"Blade Ward",
+            "description":"Take only half the damage from bludgeoning piercing and slashing attack",
+            "school":"abjuration",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 0,
+                "unit":"self"
+            },
+            "duration":"oneRound",
+            "effect":{
+                "type":"resistance",
+                "resistance":["bludgeoning", "piercing","slashing"],
+                "source":"weaponAttacks"
+            },
+            "classes":["bard","cleric","sorcerer","wizard","warlock"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight","arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["defense","self", "resistance"]
+        },
+        {
+            "id": "boneChill",
+            "name":"Bone Chill ",
+            "description":"Prevent the target from healing until your next turn. An undead target receives Disadvantage on Attack rolls.",
+            "school":"necromancy",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"necrotic",
+                "dice":"1d8"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d8", "3d8"]
+            },
+            "classes":["sorcerer","warlock","wizard"],
+            "subClasses":[
+                {
+                    "name":["circleOfSpores"],
+                    "level":2
+                },
+                {
+                    "name":["eldritchKnight", "arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["damage","necrotic","range"]
+        },
+        {
+            "id": "dancingLight",
+            "name":"Dancing Light",
+            "description":"Illuminate a 9meter radius.",
+            "school":"evocation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"tenRound",
+            "effect":{
+                "type":"light",
+                "lights":4
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 9,
+                    "unit":"meters"
+                }
+            },
+            "classes":["bard","sorcerer","wizard"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight", "arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf","drow","drowHalfElf"],
+            "tags": ["utility","light", "concentration"]
+        },
+        {
+            "id": "eldritchBlast",
+            "name":"Eldritch Blast",
+            "description":"Conjure a beam of crackling energy",
+            "school":"evocation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"force",
+                "dice":"1d10"
+            },
+
+            "scaling":{
+                "level":[5, 10],
+                "effect":["twoBeams", "threeBeams"]
+            },
+            "classes":["warlock"],
+            "tags": ["damage","range", "force"]
+        },
+        {
+            "id": "fireBolt",
+            "name":"Fire Bolt",
+            "description":"Hurl a mote of fire.",
+            "school":"evocation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"fire",
+                "dice":"1d10"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d10", "3d10"]
+            },
+            "classes":["sorcerer","wizard"],
+            "subClasses":[
+                {
+                    "name":["arcaneTrickster","eldritchKnight"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["damage","fire", "range"]
+        },
+        {
+            "id": "friends",
+            "name":"Friends",
+            "description":"Gain advantage on charisma checks against a non-hostile creature",
+            "school":"enchantement",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"tenRound",
+            "effect":{
+                "type":"buff",
+                "target":"charismaCheck",
+                "advantage": true
+            },
+            "classes":["bard", "wizard", "sorcerer", "warlock"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight", "arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["concentration","utility", "buff"]
+        },
+        {
+            "id": "guidance",
+            "name":"Guidance",
+            "description":"The target gain +1d4 to ability checks",
+            "school":"divination",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 1.5,
+                "unit":"meters"
+            },
+            "duration":"tenRound",
+            "effect":{
+                "type":"buff",
+                "target":"ailityCheck",
+                "advantage":true
+            },
+            "classes":["cleric","druid"],
+            "tags": ["concentration","buff", "utility"]
+        },
+        {
+            "id": "light",
+            "name":"Light",
+            "description":"Infuse an object with an aura of light.",
+            "school":"evocation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 1.5,
+                "unit":"meters"
+            },
+            "duration":"untilLongRest",
+            "effect":{
+                "type":"light",
+                "target":"object"
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 7.5,
+                    "unit":"meters"
+                },
+                "type":"light"
+            },
+            "classes":["bard","cleric","wizard"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight","arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["utility","light"]
+        },
+        {
+            "id": "mageHand",
+            "name":"Mage Hand",
+            "description":"Create a spectral hand that can manipulate and interact with objects.",
+            "school":"conjuration",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"tenRound",
+            "effect":{
+                "type":"manipulate",
+                "target":"object"
+            },
+            "classes":["bard","sorcerer","warlock","wizard"],
+            "races":["highElf", "highHalfElf","githyanki",""],
+            "tags": ["utility","manipulate", "conjuration"]
+        },
+        {
+            "id": "minorIllusion",
+            "name":"Minor Illusion",
+            "description":"Create an illusion that compels nearby creatures to investigate.",
+            "school":"illusion",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"tenRound",
+            "effect":{
+                "type":"illusion",
+                "target":"creature"
+            },
+            "classes":["bard", "sorcerer", "warlock", "wizard"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight","arcaneTrickster","wayOfShadow"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["utility","illusion", "distaction"]
+        },
+        {
+            "id": "poisonSpray",
+            "name":"Poison Spray",
+            "description":"Release a puff of noxious gas that deals poison damage.",
+            "school":"conjuration",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 3,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"poison",
+                "dice":"1d12"
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 2,
+                    "unit":"meters"
+                },
+                "type":"poison",
+                "dice":"1d4"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d12", "3d12"]
+            },
+            "classes":["druid","sorcerer","wizard"],
+            "subClasses":[
+                {
+                    "name":["circleOfLand"],
+                    "level":2
+                },
+                {
+                    "name":["eldritchKnight","arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "tags": ["damage","poison", "conjuration"]
+        },
+        {
+            "id": "produceFlame",
+            "name":"Produce Flame",
+            "description":"Create a flame in your hand that can be used to attack or illuminate.",
+            "school":"conjuration",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 9,
+                "unit":"meters"
+            },
+            "duration":"tenRound",
+            "damage":{
+                "type":"fire",
+                "dice":"1d8"
+            },
+            "areaOfEffect":{
+                "range" : {
+                    "distance": 9,
+                    "unit":"meters"
+                },
+                "type":"light",
+                "target":"lights"
+            },
+            "classes":["cleric","druid"],
+            "races":["asmodeus"],
+            "tags": ["","", ""]
+        },
+        {
+            "id": "rayOfFrost",
+            "name":"Ray of Frost",
+            "description":"A beam of frost that deals cold damage and slows the target.",
+            "school":"evocation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"cold",
+                "dice":"1d8"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d8", "3d8"]
+            },
+            "classes":["sorcerer","wizard"],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["damage","frost", "range"]
+        },
+        {
+            "id": "resistance",
+            "name":"Resistance",
+            "description":"You touch a creature, granting it resistance to damage.",
+            "school":"abjuration",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 1.5,
+                "unit":"meters"
+            },
+            "duration":"tenRound",
+            "effect":{
+                "type":"resistance",
+                "target":"creature"
+            },
+            "classes":["cleric","druid"],
+            "subClasses":[
+                {
+                    "name":["circleOfLand"],
+                    "level":2
+                }
+            ],
+            "tags": ["buff","defense", "abjuration"]
+        },
+        {
+            "id": "sacredFlame",
+            "name":"Sacred Flame",
+            "description":"Call down a radiant flame that deals damage to a target.",
+            "school":"evocation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"radiant",
+                "dice":"1d8"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d8", "3d8"]
+            },
+            "classes":["cleric","ranger"],
+            "tags": ["damage", "range", "radiant"]
+        },
+        {
+            "id": "shillelagh",
+            "name":"Shillelagh",
+            "description":"Imbue your staff or club with nature's power. It becomes magical, dealing 1d8 + Wisdom modifier bludgeoning damage, and uses your Spellcasting Ability for Attack Rolls.",
+            "school":"transmutation",
+            "castingTime":"bonusAction",
+            "range":{
+                "distance": 0,
+                "unit":"self"
+            },
+            "duration":"tenRound",
+            "effect":{
+                "type":"buff",
+                "target":"weapon"
+            },
+            "classes":["druid"],
+            "subClasses":[
+                {
+                    "name":["natureDomain"],
+                    "level":1
+                }
+            ],
+            "tags": ["buff", "melee", "transmutation"]
+        },
+        {
+            "id": "shockingGrasp",
+            "name":"Shocking Grasp",
+            "description":"Deliver a jolt of electricity through a touch, dealing lightning damage and preventing the target from taking reactions.",
+            "school":"evocation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 1.5,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"lightning",
+                "dice":"1d8"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d8", "3d8"]
+            },
+            "classes":["sorcerer","wizard"],
+            "subClasses":[
+                {
+                    "name":["eldritchKnight","arcaneTrickster"],
+                    "level":3
+                }
+            ],
+            "races":["highElf", "highHalfElf"],
+            "tags": ["damage","melee", "lightning"]
+        },
+        {
+            "id": "thaumaturgy",
+            "name":"Thaumaturgy",
+            "description":"Manifest minor wonder by altering your voice, causing harmless tremors, or creating other sensory effects.",
+            "school":"transmutation",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 9,
+                "unit":"meters"
+            },
+            "duration":"tenRound",
+            "effect":{
+                "type":"buff",
+                "target":"",
+                "advantage":true
+            },
+            "classes":["cleric"],
+            "tags": ["utility","transmutation"]
+        },
+        {
+            "id": "thornWhip",
+            "name":"Thorn Whip",
+            "description":"Point at a target to grant yourself advantage on your next attack roll against it.",
+            "school":"divination",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"oneRound",
+            "damage":{
+                "type":"piercing",
+                "dice":"1d6"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d6", "3d6"]
+            },
+            "classes":["druid"],
+            "subClasses":[
+                {
+                    "name":["natureDomain"],
+                    "level":1
+                }
+            ],
+            "tags": ["buff", "divination"]
+        },
+        {
+            "id": "viciousMockery",
+            "name":"Vicious Mockery",
+            "description":"Unleash a string of insults at a creature, dealing psychic damage and giving it disadvantage on its next attack roll.",
+            "school":"enchantement",
+            "castingTime":"oneAction",
+            "range":{
+                "distance": 18,
+                "unit":"meters"
+            },
+            "duration":"instantaneous",
+            "damage":{
+                "type":"psychic",
+                "dice":"1d4"
+            },
+            "scaling":{
+                "level":[5, 10],
+                "effect":["2d4", "3d4"]
+            },
+            "classes":["bard"],
+            "tags": ["damage", "psychic"]
+        }
+    ]
+}
