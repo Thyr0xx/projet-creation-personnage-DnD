@@ -501,9 +501,8 @@
             },
             "duration":"tenRound",
             "effect":{
-                "type":"buff",
-                "target":"",
-                "advantage":true
+                "type":"sensory",
+                "effectType":["voice","tremors","light"]
             },
             "classes":["cleric"],
             "tags": ["utility","transmutation"]
@@ -511,7 +510,7 @@
         {
             "id": "thornWhip",
             "name":"Thorn Whip",
-            "description":"Point at a target to grant yourself advantage on your next attack roll against it.",
+            "description":" It deals damage to a target and pulls it closer to the caster..",
             "school":"divination",
             "castingTime":"oneAction",
             "range":{
@@ -534,7 +533,7 @@
                     "level":1
                 }
             ],
-            "tags": ["buff", "divination"]
+            "tags": ["damage", "range","piercing","pull"]
         },
         {
             "id": "viciousMockery",
@@ -556,7 +555,7 @@
                 "effect":["2d4", "3d4"]
             },
             "classes":["bard"],
-            "tags": ["damage", "psychic"]
+            "tags": ["damage", "psychic","debuff"]
         }
     ]
 }
